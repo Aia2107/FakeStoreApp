@@ -1,12 +1,82 @@
-# React + Vite
+🛍️ FakeStore E-Commerce App
+This is a front-end React app that interacts with the FakeStoreAPI to display, create, edit, and delete mock products. It mimics an e-commerce experience and helps practice working with REST APIs, React Router, and React Bootstrap UI components.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+📸 Demo
+Live Demo Link (optional): [Your Deployed URL Here]
+Screenshots (optional): Add images of your Home, Product List, and Product Details pages
 
-Currently, two official plugins are available:
+🚀 Features
+✅ Browse products from a mock API
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+✅ View product details with images and descriptions
 
-## Expanding the ESLint configuration
+✅ Add new products (form with validation)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+✅ Edit existing products
+
+✅ Delete products with confirmation
+
+✅ Responsive design with React Bootstrap
+
+✅ Handles loading states and error messages
+
+⚠️ Note: Since FakeStoreAPI is for testing, POST/PUT/DELETE requests return success but don’t persist changes.
+
+🧑‍💻 Tech Stack
+React (with Vite)
+
+Axios – for API requests
+
+React Router DOM – for navigation
+
+React Bootstrap – for layout and styling
+
+FakeStoreAPI – external mock API
+
+🗂️ Pages Overview
+Page	Path	Description
+🏠 Home	/	Welcome screen with navigation to the product list
+🛍 Product List	/products	Displays all products fetched from the API
+📄 Product Detail	/products/:id	Shows full info on a single product + delete/edit options
+➕ Add Product	/add-product	Form to add a new product using a POST request
+✏️ Edit Product	/edit-product/:id	Form to update product details using PUT
+
+🛠️ Installation & Setup
+bash
+Copy
+Edit
+# 1. Create the app with Vite
+npx create-vite fakestore-app --template react
+
+# 2. Navigate into the folder
+cd fakestore-app
+
+# 3. Install dependencies
+npm install
+npm install axios react-router-dom react-bootstrap bootstrap
+
+# 4. Import Bootstrap in main.jsx
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+# 5. Start the dev server
+npm run dev
+📁 Folder Structure
+css
+Copy
+Edit
+src/
+│
+├── components/
+│   ├── Navbar.jsx
+│   ├── ProductCard.jsx
+│   └── LoadingSpinner.jsx
+│
+├── pages/
+│   ├── Home.jsx
+│   ├── ProductList.jsx
+│   ├── ProductDetails.jsx
+│   ├── AddProduct.jsx
+│   └── EditProduct.jsx
+│
+├── App.jsx
+├── main.jsx
